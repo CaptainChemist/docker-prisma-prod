@@ -1,0 +1,10 @@
+services:
+  frontend:
+    ports:
+      - "80:80"
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+      - ./prisma/dev.db:/app/prisma/dev.db
+      - .env.local:/app/.env.local
